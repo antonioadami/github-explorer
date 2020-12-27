@@ -19,11 +19,11 @@ const Dashboard: React.FC = () => {
     const [newRepo, setNewRepo] = useState('');
     const [inputError, setInputError] = useState('');
     const [repositories, setRepositories] = useState<Repository[]>(() => {
-        const storegedRepos = localStorage.getItem(
+        const storagedRepos = localStorage.getItem(
             '@GithubExplorer:repositories',
         );
-        if (storegedRepos) {
-            return JSON.parse(storegedRepos);
+        if (storagedRepos) {
+            return JSON.parse(storagedRepos);
         }
         return [];
     });
